@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swiperefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="@drawable/backgroudn_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                tools:context="com.example.bojidar.weatherapp.MainActivity">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Weather"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+                <LinearLayout
+
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+                        <AutoCompleteTextView
+                            android:textSize="20sp"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:gravity=""
+                            android:id="@+id/input_city"
+                            android:hint="Enter City"
+                            android:textColorHint="#FFFFFF"
+                            android:textColor="#FFFFFF"
+                            android:background="#283048"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"/>
+                        <Button
+                            android:id="@+id/clear_text_button"
+                            android:visibility="visible"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginRight="26dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:background="@drawable/voice_search_icon" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+
+
+                <ProgressBar
+                    android:layout_marginTop="60dp"
+                    android:id="@+id/prog_bar"
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+                <ImageView
+                    android:layout_marginTop="68dp"
+                    android:id="@+id/current_weather_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ScrollView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:id="@+id/data_current_layout"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="32sp"
+                            android:id="@+id/city_tv"
+                            android:text="City"
+                            android:textColor="#FFFFFF"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:id="@+id/country_tv"
+                            android:text="Country"
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="28sp"
+                            android:id="@+id/temp_tv"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Temp"
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="16sp"
+                            android:layout_marginTop="12dp"
+                            android:id="@+id/date_tv"
+                            android:text="Date"
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="16sp"
+                            android:id="@+id/humidity_tv"
+                            android:text="Humidity: "
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="16sp"
+                            android:id="@+id/pressure_tv"
+                            android:text="Pressure: "
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="16sp"
+                            android:id="@+id/condition_tv"
+                            android:text="Condition: "
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="16sp"
+                            android:id="@+id/vis_tv"
+                            android:text="Visibility: "
+                            android:visibility="visible"
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="16sp"
+                            android:id="@+id/precip_tv"
+                            android:text="Precipitation: "
+                            android:visibility="gone"
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="16sp"
+                            android:id="@+id/wind_speed_tv"
+                            android:text="Wind Speed: "
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:textSize="16sp"
+                                android:lines="1"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/wind_dir_tv"
+                                android:text="Wind Dir: "
+                                android:textColor="#FFFFFF"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_marginLeft="4dp"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/wind_dir_icon_iv"
+                                android:layout_width="21dp"
+                                android:layout_height="21dp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </ScrollView>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/open_hours_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#283048"
+                    android:text="24 Hours"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/open_days_activity"
+                    android:text="10 Days"
+                    android:textColor="#FFFFFF"
+                    android:background="#283048"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="122dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/icon_gps_m_activity"
+                    android:src="@drawable/icon_gps"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+                <LinearLayout
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true">
+                    <TextView
+                        android:layout_marginRight="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="C"
+                        android:textColor="#FFFFFF"
+                        android:textSize="21sp"/>
+                    <io.ghyeok.stickyswitch.widget.StickySwitch
+
+                        android:id="@+id/sticky_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:ss_animationDuration="200"
+                        app:ss_iconPadding="10dp"
+                        app:ss_iconSize="12dp"
+                        app:ss_selectedTextSize="1sp"
+                        app:ss_textSize="20sp"
+                        app:ss_animationType="line"/>
+                    <TextView
+                        android:layout_marginLeft="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="F"
+                        android:textColor="#FFFFFF"
+                        android:textSize="21sp"
+                        />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

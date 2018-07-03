@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string-array name="suggestion_query">
+        <item>opa 1</item>
+        <item>koko</item>
+        <item>fafa</item>
+        <item>dada</item>
+        <item>grgr</item>
+        <item>zzaa</item>
+        <item>fhhj</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

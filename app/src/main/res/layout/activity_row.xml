@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_row"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#283048"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    android:layout_marginBottom="5dp"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:lines="1"
+        android:id="@+id/hour_tv"
+        android:textSize="19dp"
+        android:textColor="#FFFFFF"
+        android:text="Soeeeeeme"
+        android:layout_marginRight="105dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:lines="1"
+        android:id="@+id/temp_tv"
+        android:textSize="19dp"
+        android:textColor="#FFFFFF"
+        android:text="Some"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

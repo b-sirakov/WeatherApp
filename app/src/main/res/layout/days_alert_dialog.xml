@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="30dp"
+    android:background="@drawable/backgroudn_color">
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:text="Date: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/date_alert_dialog_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Temp: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/temp_alert_dialog_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:text="Min temp: "
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/max_temp_alert_dialog_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:text="Max temp: "
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/min_temp_alert_dialog_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    <TextView
+        android:text="Wind speed: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/wind_speed_alert_dialog_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Humidity: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/humidity_alert_dialog_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Condition: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/condition_alert_dialog_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:text="Visibility: "
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/vis_alert_dialog_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Precipitation: "
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:id="@+id/precip_alert_dialog_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:text="Sunrise: "
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/sunrise_alert_dialog_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:text="Sunset: "
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/sunset_alert_dialog_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/icon_alert_dialog_tv"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
